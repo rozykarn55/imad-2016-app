@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/mypage1',function(req,res){
-    res.send('This is my first notice to this application');
+   res.sendFile(path.join(__dirname, 'ui', 'roz.html'));
     
 });
 app.get('/mypage2',function(req,res){

@@ -14,11 +14,12 @@ app.get('/mypage1',function(req,res){
     
 });
 app.get('/mypage2',function(req,res){
-    res.send('This is my second notice to this application');
+   res.sendFile(path.join(__dirname, 'ui', 'roz1.html'));
     
 });
 app.get('/mypage3',function(req,res){
-    res.send('This is my third notice to this application');
+       res.sendFile(path.join(__dirname, 'ui', 'roz3.html'));
+
     
 });
 app.get('/ui/style.css', function (req, res) {

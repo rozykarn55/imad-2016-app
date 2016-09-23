@@ -3,3 +3,9 @@ console.log('Loaded!');
 var element=document.getElementById('main-text');
 element.innerhtml='This is the code done in inspect';
 
+//move the image
+var img=document.getElementById('img');
+img.onClick = function (){
+    img.style.Marginleft='100px';
+    
+};

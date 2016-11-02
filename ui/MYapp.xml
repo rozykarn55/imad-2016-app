@@ -290,3 +290,90 @@ public class Reg extends Activity {
         android:text="FEMALE" />
 
 </AbsoluteLayout>
+package com.example.gothrough;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class Loginnew extends Activity {
+Button b;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.log);
+		b=(Button)findViewById(R.id.button1);
+		b.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent in=new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.indiabix.com"));
+				startActivity(in);
+				
+			}
+		});
+	}
+	
+
+}
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="29dp"
+        android:layout_y="178dp"
+        android:text="Paaword" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="121dp"
+        android:layout_y="290dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="12dp"
+        android:layout_y="100dp"
+        android:text="User name(YOUR NAME)" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_x="188dp"
+        android:layout_y="101dp"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_x="176dp"
+        android:layout_y="180dp"
+        android:ems="10"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+</AbsoluteLayout>
+
+
+

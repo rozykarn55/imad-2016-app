@@ -374,6 +374,187 @@ Button b;
     </EditText>
 
 </AbsoluteLayout>
+package com.example.gothrough;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class Calcul extends Activity {
+	Button b1,b2,b3,b4;
+	EditText t1,t2,t3;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.cal);
+		b1=(Button)findViewById(R.id.button1);
+		b2=(Button)findViewById(R.id.button2);
+		b3=(Button)findViewById(R.id.button3);
+		b4=(Button)findViewById(R.id.button4);
+		t1=(EditText)findViewById(R.id.editText1);
+		t2=(EditText)findViewById(R.id.editText2);
+		t3=(EditText)findViewById(R.id.editText3);
+		b1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				int n1=Integer.parseInt(t1.getText().toString());
+				int n2=Integer.parseInt(t2.getText().toString());
+				int sum=n1+n2;
+				t3.setText(Integer.toString(sum));
+				
+				
+			}
+		});
+		b2.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				int n1=Integer.parseInt(t1.getText().toString());
+				int n2=Integer.parseInt(t2.getText().toString());
+				int sum=n1-n2;
+				t3.setText(Integer.toString(sum));
+				
+			}
+		});
+		b3.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				int n1=Integer.parseInt(t1.getText().toString());
+				int n2=Integer.parseInt(t2.getText().toString());
+				int sum=n1*n2;
+				t3.setText(Integer.toString(sum));
+			}
+		});
+		b4.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				int n1=Integer.parseInt(t1.getText().toString());
+				int n2=Integer.parseInt(t2.getText().toString());
+				int sum=n1/n2;
+				t3.setText(Integer.toString(sum));
+			}
+		});
+		
+	}
+	
+
+}
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="16dp"
+        android:layout_y="120dp"
+        android:text="Enter First Number" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="179dp"
+        android:text="Enter Second Number" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_x="181dp"
+        android:layout_y="108dp"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_x="186dp"
+        android:layout_y="166dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="42dp"
+        android:layout_y="353dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="275dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="204dp"
+        android:layout_y="353dp"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="201dp"
+        android:layout_y="277dp"
+        android:text="*" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_x="190dp"
+        android:layout_y="219dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="88dp"
+        android:layout_y="36dp"
+        android:text="MINI CALCULATOR"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="30dp"
+        android:layout_y="233dp"
+        android:text="Result" />
+
+</AbsoluteLayout>
 
 
 
